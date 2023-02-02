@@ -1,0 +1,51 @@
+<section class="container">
+  <h2 class="text-center color">Login</h2>
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+
+
+    <!-- Nombre -->
+    <section class="form-group">
+      <section class="form-floating mb-3">
+        <input type="name" class="form-control input" id="name" placeholder="name@example.com" formControlName="name">
+        <label for="floatingInput">Nombre</label>
+        <section *ngIf="name?.invalid && name?.touched">
+          <section class="text-danger">
+            Nombre requerido
+          </section>
+        </section>
+      </section>
+    </section>
+
+
+    <!-- Apellido -->
+     <section class="form-group">
+      <section class="form-floating mb-3">
+        <input type="username" class="form-control input" id="username" placeholder="name@example.com" formControlName="username">
+        <label for="floatingInput">Apellido</label>
+        <section *ngIf="username?.invalid && username?.touched">
+          <section class="text-danger">
+            Apellido requerido
+          </section>
+        </section>
+      </section>
+    </section>
+
+
+    <!-- Contraseña -->
+    <section class="form-group">
+      <section class="form-floating mb-3">
+        <input type="password" class="form-control input" id="password" placeholder="name@example.com" formControlName="password">
+        <label for="floatingInput">Contraseña</label>
+        <section *ngIf="password?.invalid && password?.touched">
+          <section class="text-danger">
+            Password requerido
+          </section>
+        </section>
+      </section>
+    </section>
+
+    <button type="submit" class="btn btn-color text-white" [disabled]="!loginForm.valid">Enviar</button>
+
+  </form>
+  <!-- <section *ngIf="alert" class="text-success">Ingreso exitoso</section> -->
+</section>

@@ -1,0 +1,59 @@
+<section class="container">
+    <h2 class="text-center color-text">Registro de usuario</h2>
+
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+
+      <!-- Nombre -->
+      <section class="form-group">
+        <label for="name">Nombre</label>
+        <input type="text" class="form-control" id="name" formControlName="name" minlength="3" maxlength="25">
+        <section *ngIf="name?.invalid && name?.touched">
+          <section class="text-danger">
+            Por favor ingrese un nombre que contenga como mínimo 3 caracteres y un máximo de 25
+          </section>
+        </section>
+
+      </section>
+
+      <!-- Apellido -->
+
+      <section class="form-group">
+        <label for="apellido">Apellido</label>
+        <input type="text" class="form-control" id="apellido" formControlName="apellido" minlength="3" pattern="([A-Za-zÁÉÍÓÚñáéíóúÑ]+\s+[A-Za-zÁÉÍÓÚñáéíóúÑ]+)" required>
+        <section *ngIf="apellido?.invalid && apellido?.touched">
+          <section class="text-danger">
+            Por favor ingrese un apellido que tenga como mínimo 2 palabras
+          </section>
+        </section>
+      </section>
+
+
+      <!-- Email -->
+      <section class="form-group">
+        <label for="email">Email address</label>
+        <input type="email" class="form-control" id="email" formControlName="email">
+        <section *ngIf="email?.invalid && email?.touched">
+          <section class="text-danger">
+            Email invalido
+          </section>
+        </section>
+      </section>
+
+      <!-- Webside -->
+      <section class="form-group">
+        <label for="webside">Sitio web</label>
+        <input type="email" class="form-control mb-4" id="webside" formControlName="webside">
+        <section *ngIf="webside?.invalid && webside?.touched">
+          <section class="text-danger">
+            El link del webside es requerido
+          </section>
+        </section>
+      </section>
+
+      <section>
+        <button type="submit" class="btn form-control text-white" [disabled]="!loginForm.valid">Guardar</button>
+      </section>
+
+    </form>
+  </section>
+

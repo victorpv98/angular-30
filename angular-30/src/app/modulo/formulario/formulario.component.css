@@ -1,0 +1,29 @@
+.btn {
+    background-color: #06365a;
+    width: 50%;
+    display: block;
+    margin: auto;
+  }
+.color-text{
+    color: #053947;
+    font-weight: 300;
+}
+.container{
+  padding:5% 10% 10% 10%;
+}
+form{
+  width: 50%;
+  margin: auto;
+  padding: 8% 4% 4% 4%;
+  background: rgb(229, 229, 229);
+  border-radius: 5px;
+  box-shadow:
+  2.8px 3.3px 1.9px rgba(0, 0, 0, 0.018),
+  6.5px 7.6px 4.3px rgba(0, 0, 0, 0.026),
+  11.7px 13.6px 7.7px rgba(0, 0, 0, 0.032),
+  19.4px 22.6px 12.8px rgba(0, 0, 0, 0.038),
+  32px 37.3px 21.2px rgba(0, 0, 0, 0.044),
+  55.9px 65.2px 37px rgba(0, 0, 0, 0.052),
+  121px 141px 80px rgba(0, 0, 0, 0.07)
+;
+}

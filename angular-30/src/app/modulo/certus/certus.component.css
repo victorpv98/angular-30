@@ -1,0 +1,13 @@
+.navbar-custom {
+    background-color: #242226;
+    padding: 2%;
+  }
+
+nav{
+  display: flex;
+  gap: 50px;
+}
+ul{
+  display: flex;
+  gap: 50px;
+}
